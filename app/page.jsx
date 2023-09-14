@@ -1,11 +1,8 @@
-import TopicList from '@/components/topicsList'
-import React from 'react'
+import TopicList from "@/components/topicsList";
+import React from "react";
 
 const page = () => {
-  return (
-      <TopicList />
+  return <TopicList />;
+};
 
-  )
-}
-
-export default page
+export default page;
