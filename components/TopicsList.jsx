@@ -24,12 +24,12 @@ export default async function TopicList() {
     <>
       {topics.map((topic) => (
         <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
-          <div>
+          <div key={topic._id}>
             <h2 className="font-bold text-2xl">{topic.title}</h2>
-            <div>{topic.description}</div>
+            <div>{topic.description} , id :{topic._id} </div>
           </div>
           <div className="flex gap-2">
-            <RemoveBtn />
+            <RemoveBtn id={topic._id} />
             <Link href={`/editTopic/${topic._id}`}>
               <HiPencilAlt size={24} />
             </Link>
